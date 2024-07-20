@@ -1,0 +1,97 @@
+---
+title: "Alteration classification"
+author: "Ian R. Sturgill"
+format: html
+editor: visual
+---
+
+## Purpose
+
+Here we use information about *BAP1* variants, RNA-level expression, and gene-level copy number estimates to classify samples as *BAP1*-altered or -unaltered.
+
+## Set-up
+
+We'll first load in our prior sample annotation from variant_filtering.qmd and the somatic and germline variant calls. Please note: germline variants are from the PanCanAtlas Publications page at [https://gdc.cancer.gov/about-data/publications/PanCanAtlas-Germline-AWG](#0) Germline variants contain controlled access information and require approval for dbGaP access.
+
+```{r}
+# renv::activate() # Activate R environment if necessary
+library(data.table)
+
+sample_anno <- fread("../variant_filtering/sample_anno.txt")
+variants <- fread("../variant_filtering/variants_filtered.txt")
+variants_germline <- fread("../variant_filtering/variants_germline_filtered.txt")
+```
+
+## Classification
+
+We will classify samples as being *BAP1*-altered if one or both of the following are true:
+
+1.  The sample has a somatic or germline variant that passed simple QC filtering.
+
+2.  The sample has estimated ABSOLUTE gene-level copy number less than 2 for *BAP1*.
+
+```{r}
+cohorts <- sort(unique(sample_anno$cohort))
+combined_variant_ids <- c(variants$SAMPLE, variants_germline$bcr_patient_barcode)
+
+sample_anno$altered_status <- 
+  ifelse(substr(sample_anno$tcga_id, 1, 12) %in% combined_variant_ids |
+           sample_anno$copynumber_absolute_bap1 < 2, "altered", "unaltered")
+
+sample_anno$alteration_type <-
+  ifelse(substr(sample_anno$tcga_id, 1, 12) %in% combined_variant_ids &
+           (is.na(sample_anno$copynumber_absolute_bap1) |
+              sample_anno$copynumber_absolute_bap1 >= 2), "mutation",
+         ifelse(substr(sample_anno$tcga_id, 1, 12) %in% combined_variant_ids &
+           sample_anno$copynumber_absolute_bap1 < 2, "mutation+copynumber",
+           ifelse(!(substr(sample_anno$tcga_id, 1, 12) %in% combined_variant_ids) & sample_anno$copynumber_absolute_bap1 < 2, "copynumber", "unaltered")))
+```
+
+These classification annotations can now be used for grouping for downstream analyses and we'll update our per-sample annotations.
+
+```{r}
+write.table(sample_anno, file = "sample_anno.txt", sep = "\t", row.names = FALSE)
+```
+
+We'll also collect some cohort-level data:
+
+```{r}
+cohort_anno <- data.frame(row.names = cohorts)
+
+for (cohort in cohorts) {
+  cohort_anno[cohort, "Mutation only"] <- 
+    sum(sample_anno$alteration_type[sample_anno$cohort == cohort] == "mutation",
+        na.rm = TRUE)
+  
+  cohort_anno[cohort, "Copynumber only"] <-
+    sum(sample_anno$alteration_type[sample_anno$cohort == cohort] == "copynumber",
+        na.rm = TRUE)
+  
+  cohort_anno[cohort, "Mutation+Copynumber"] <-
+    sum(sample_anno$alteration_type[sample_anno$cohort == cohort] == 
+          "mutation+copynumber", na.rm = TRUE)
+  
+  cohort_anno[cohort, "Altered"] <-
+    sum(sample_anno$altered_status[sample_anno$cohort == cohort] == "altered", 
+        na.rm = TRUE)
+  
+  cohort_anno[cohort, "Unaltered"] <-
+    sum(sample_anno$altered_status[sample_anno$cohort == cohort] == "unaltered", 
+        na.rm = TRUE)
+  
+  cohort_anno[cohort, "Cohort size"] <-
+    sum(sample_anno$cohort[!is.na(sample_anno$altered_status)] == cohort)
+}
+
+cohort_anno[["% cohort altered"]] <-
+  round(cohort_anno$Altered / (cohort_anno$Altered + cohort_anno$Unaltered) * 100, 
+        2)
+
+rownames(cohort_anno) <- gsub("TCGA-", "", rownames(cohort_anno))
+
+cohort_anno <- cohort_anno[order(cohort_anno[["% cohort altered"]], 
+                                 decreasing = TRUE), ]
+
+write.table(cohort_anno, file = "cohort_anno.txt", sep = "\t", row.names = TRUE,
+            quote = FALSE)
+```
