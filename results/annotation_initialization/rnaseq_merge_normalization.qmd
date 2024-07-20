@@ -1,0 +1,130 @@
+---
+title: "RNA-seq merging and normalization"
+author: "Ian R. Sturgill"
+format: html
+editor: visual
+---
+
+## Purpose
+
+Here we merge TCGA RNA-seq STAR count data at the cohort-level and perform simple library size normalization using DESeq2.
+
+## Set-up
+
+We'll first load the required libraries and annotations for RNA-seq data that were downloaded from the TCGA Genomic Data Commons. After removing RNA-seq samples that were not represented in our variant calling data, we have 76 duplicate RNA-seq aliquots for primary tumor samples. There are various ways of handling deduplication, but we opted to proceed with Kevin Blighe's public comment about the Broad Institute's recommendation of selecting the highest lexicographical sort value aliquot in instances of duplication: <https://www.biostars.org/p/311017/#311131>
+
+```{r}
+#| message: false
+# renv::activate() # Activate R environment if necessary
+library(data.table)
+library(DESeq2)
+
+rnaseq_anno <- fread("../../data/tcga_rnaseq_anno.txt", sep = "\t", header = TRUE)
+supp_table_s1 <- fread("../../data/supplemental_tables/table_s1.txt")
+cohorts <- sort(unique(supp_table_s1$Column1.cases.project.project_id))
+
+# Remove samples not represented in variant calling data
+rnaseq_anno <- rnaseq_anno[substr(rnaseq_anno$cases, 1, 15) %in% 
+                             substr(supp_table_s1$tcga_barcode, 1, 15), ]
+
+# Remove duplicate aliquots
+rnaseq_anno <- rnaseq_anno[order(rnaseq_anno$cases, decreasing = TRUE), ]
+rnaseq_anno <- rnaseq_anno[!duplicated(substr(rnaseq_anno$cases, 1, 15)), ]
+```
+
+## Merging cohort-level sample data
+
+Now we'll merge raw STAR counts data for each cohort.
+
+```{r}
+# rnaseq_dir points to a directory of individual sample-level counts files that are collectively too large to be hosted here; they can be downloaded from the TCGA GDC. See rnaseq_anno for individual files
+rnaseq_dir <- "/datastore/nextgenout4/share/labs/hoadleylab/Ian/BAP1/rnaseq"
+
+for (cohort in cohorts) {
+  cohort_samples <- rnaseq_anno$file_name[rnaseq_anno$project == cohort]
+  cohort_ids <- substr(rnaseq_anno$cases[rnaseq_anno$project == cohort], 1, 15)
+  
+  for (sample in cohort_samples) {
+    counts_file <- sprintf("%s/%s/%s", rnaseq_dir, cohort, sample)
+    sample_counts <- fread(counts_file)
+    
+    # The first 4 rows contain QC metadata that should be removed here
+    sample_counts <- sample_counts[-c(1:4), ]
+    sample_genes <- sample_counts$gene_id
+    sample_counts <- as.data.frame(sample_counts, 
+                                   row.names = sample_genes)
+
+    # We also retain just the unstranded raw counts data
+    sample_counts <- as.vector(sample_counts[, "unstranded"])
+
+    if (sample == cohort_samples[1]) {
+      cohort_genes <- sample_genes
+      cohort_df <- data.frame(unstranded = sample_counts,
+                              row.names = cohort_genes)
+    }
+    else {
+      cohort_df <- cbind(cohort_df, sample_counts)
+    }
+    if (!(all(sample_genes == cohort_genes))) {
+      stop("Gene/row mismatch")
+    }
+  }
+  colnames(cohort_df) <- cohort_ids
+  merged_file <- sprintf("../../data/rnaseq/merged_raw/%s_merged_counts.txt", 
+                         cohort)
+  write.table(cohort_df, file = merged_file, sep = "\t")
+  cat(sprintf("%s complete", cohort), "\n")
+}
+```
+
+## Size factor normalization with DESeq2
+
+Next we'll perform size factor normalization using DESeq2 for the purposes of downstream visualization and within-cohort comparison.
+
+```{r}
+read_rna <- function(counts_file) {
+  # Reading the counts data in using this method is faster but creates an extra
+  # column for the rownames, so we adjust this below
+  rna <- suppressWarnings(as.data.frame(fread(counts_file)))
+  rownames(rna) <- rna$V1
+  rna <- rna[, -1]
+  return(rna)
+}
+
+normalize_counts <- function(cohort, 
+                             raw_dir = "../../data/rnaseq/merged_raw/") {
+  
+  cohort_short <- strsplit(cohort, "-")[[1]][2]
+  rna <- sprintf("%s/%s_merged_counts.txt", raw_dir, cohort)
+  rna <- read_rna(rna)
+  rna_coldata <- data.frame(tcga_id = colnames(rna))
+  
+  # Design doesn't matter at this point for this purpose, so we set it 
+  # to the default
+  dds <- DESeqDataSetFromMatrix(countData = rna, 
+                                colData = rna_coldata, 
+                                design = ~ 1)
+  
+  # Basic filtering to remove low-count genes
+  dds <- estimateSizeFactors(dds)
+  rna_norm <- counts(dds, normalized = TRUE)
+  
+  return(rna_norm)
+}
+```
+
+Now we'll iterate through each cohort:
+
+```{r}
+#| eval: false
+for (cohort in cohorts) {
+  norm_dir <- "../../data/rnaseq/merged_normalized/"
+  rna_norm <- normalize_counts(cohort)
+  rna_out <- sprintf("%s/%s_merged_normalized.txt", 
+                     norm_dir,
+                     cohort)
+  
+  write.table(rna_norm, file = rna_out, sep = "\t", col.names = NA)
+  cat(sprintf("%s complete", cohort), "\n")
+}
+```

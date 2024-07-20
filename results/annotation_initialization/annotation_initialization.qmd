@@ -1,0 +1,181 @@
+---
+title: "Annotation initialization"
+author: "Ian R. Sturgill"
+format: html
+editor: visual
+---
+
+## Purpose
+
+Here we initialize TCGA per-sample annotations, starting with the list of samples that we used for *BAP1* variant calling, as well as RNA-seq and gene-level copy number data. We will continue to build on these annotations later as we add more data and data types.
+
+## Set-up
+
+We'll first load the required libraries and list of samples used, as well as create a vector of unique TCGA sample 15-character IDs. The type_id matches sample types from [https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/sample-type-codes](#0), where type codes \>=10 correspond to normal or non-tumor samples.
+
+```{r}
+# renv::activate() # Activate R environment if necessary
+library(data.table)
+
+supp_table_s1 <- fread("../../data/supplemental_tables/table_s1.txt")
+tcga_samples <- unique(substr(supp_table_s1$tcga_barcode[supp_table_s1$type_id < 10], 1, 15))
+
+sample_anno <- data.frame(tcga_id = tcga_samples)
+```
+
+## Tumor purity
+
+We'll first pull in tumor purity data from the PanCanAtlas Publications page ([https://gdc.cancer.gov/about-data/publications/pancanatlas](#0)):
+
+```{r}
+purity <- fread("../../data/PanCanAtlas_Publications/TCGA_mastercalls.abs_tables_JSedit.fixed.txt")
+
+cohort <- c()
+sample_purity <- c()
+
+for (id in sample_anno$tcga_id) {
+  cohort <- c(cohort, 
+              ifelse(id %in% substr(supp_table_s1$tcga_barcode, 1, 15), 
+                     supp_table_s1$Column1.cases.project.project_id[substr(supp_table_s1$tcga_barcode, 1, 15) == id], NA))
+
+  sample_purity <- c(sample_purity, 
+                     ifelse(id %in% purity$array,
+                            purity$purity[purity$array == id], NA))
+}
+
+sample_anno$cohort <- cohort
+sample_anno$purity <- sample_purity
+
+cohorts <- sort(unique(sample_anno$cohort))
+```
+
+## RNA-seq
+
+Then we'll pull in log2 size factor-normalized *BAP1* RNA-seq expression data. Raw counts were normalized using DESeq2 previously (see rnaseq_merged_normalization.qmd).
+
+```{r}
+bap1_ensembl <- "ENSG00000163930.10"
+norm_dir <- "../../data/rnaseq/merged_normalized/"
+
+read_rna <- function(counts_file) {
+  # Reading the counts data in using this method is faster but creates an extra
+  # column for the rownames, so we adjust this below
+  rna <- suppressWarnings(as.data.frame(fread(counts_file)))
+  rownames(rna) <- rna$V1
+  rna <- rna[, -1]
+  return(rna)
+}
+
+for (cohort in cohorts) {
+  rna_norm <- sprintf("%s/%s_merged_normalized.txt", norm_dir, cohort)
+  rna_norm <- read_rna(rna_norm)
+  log2_bap1 <- log2(rna_norm[bap1_ensembl, ] + 1)
+  bap1_df <- data.frame(tcga_id = colnames(rna_norm),
+                        log2_bap1 = as.numeric(log2_bap1))
+  
+  for (sample_id in bap1_df$tcga_id) {
+    if (sample_id %in% sample_anno$tcga_id) {
+      sample_val <- bap1_df$log2_bap1[bap1_df$tcga_id == sample_id]
+      sample_anno$log2_bap1[sample_anno$tcga_id == sample_id] <- sample_val
+    }
+    else {
+      sample_anno$log2_bap1[sample_anno$tcga_id == sample_id] <- NA
+    }
+  }
+  cat(sprintf("%s complete", cohort), "\n")
+}
+```
+
+## Gene-level copy number
+
+Here we'll add ABSOLUTE hg38 LiftOver gene-level copy number estimates from the GDC for *BAP1* to the per-sample annotations.
+
+```{r}
+absolute_anno <- read.delim("../../data/gdc_absolute_genelevelCN_anno.txt")
+absolute_anno$cases <- substr(absolute_anno$cases, 1, 15)
+
+# absolute_dir points to a directory of individual sample tsv files downloaded from # GDC
+absolute_dir <- "../../../cn_genelevel_absolute"
+
+for (tcga_id in sample_anno$tcga_id) {
+  if (tcga_id %in% absolute_anno$cases) {
+    sample_file <- absolute_anno$file_name[absolute_anno$cases == tcga_id]
+    sample_cn <- fread(sprintf("%s/%s", absolute_dir, sample_file))
+    sample_anno$copynumber_absolute_bap1[sample_anno$tcga_id == tcga_id] <-
+      sample_cn$copy_number[sample_cn$gene_name == "BAP1"]
+  }
+  else {
+    sample_anno$copynumber_absolute_bap1[sample_anno$tcga_id == tcga_id] <- NA
+  }
+}
+```
+
+## Segment width for samples with CN loss
+
+Finally, we'll add masked copy number segment data from the GDC DNAcopy workflow, which gives the estimated segment width for the chromosomal segment containing the *BAP1* locus.
+
+```{r}
+library(GenomicRanges)
+library(annotables)
+
+bap1_anno <- grch38[grch38$symbol == "BAP1", ]
+bap1_gr <- GRanges(seqnames = Rle(paste0("chr", bap1_anno$chr)),
+                   ranges = IRanges(start = bap1_anno$start,
+                                    end = bap1_anno$end))
+
+segment_anno <- read.delim("../../data/gdc_maskedcopynumberSeg_anno.txt")
+
+# Remove non-tumor samples
+segment_anno <- segment_anno[substr(segment_anno$cases, 14, 15) < 10, ]
+
+# In cases of exact sample matches, use the aliquot with highest lexicographical 
+# sort value
+segment_anno <- segment_anno[order(segment_anno$cases, decreasing = TRUE), ]
+segment_anno <- segment_anno[!duplicated(substr(segment_anno$cases, 1, 15)), ]
+
+sample_anno$bap1_segment_location <- NA
+sample_anno$bap1_segment_width <- NA
+
+# cn_dir points to a directory of individual sample masked segment files downloaded
+# from the GDC
+for (cohort in cohorts) {
+  cn_dir <- sprintf("../../../cn_segmasked/%s", cohort)
+  cohort_ids <- sample_anno$tcga_id[sample_anno$cohort == cohort & 
+                                      sample_anno$tcga_id %in% 
+                                      substr(segment_anno$cases, 1, 15)]
+  
+  for (sample_id in cohort_ids) {
+    sample_file <- segment_anno$file_name[substr(segment_anno$cases, 1, 15) == sample_id]
+    sample_file <- sprintf("%s/%s", cn_dir, sample_file)
+
+    if (file.exists(sample_file)) {
+      sample_cn <- fread(sample_file)
+      sample_cn <- sample_cn[sample_cn$Chromosome == bap1_anno$chr]
+      sample_gr <- GRanges(seqnames = Rle(paste0("chr", bap1_anno$chr)),
+                           IRanges(start = sample_cn$Start,
+                                   end = sample_cn$End))
+      bap1_segment <- findOverlaps(bap1_gr, sample_gr)@to
+      segment_gr <- sample_gr[bap1_segment]
+      segment_start <- mean(segment_gr@ranges@start)
+      segment_width <- mean(segment_gr@ranges@width)
+      segment_end <- segment_start + segment_width - 1
+      segment_location <- paste0(as.character(segment_gr@seqnames@values[1]),
+                                 ":",
+                                 segment_start,
+                                 "-",
+                                 segment_end)
+      sample_anno$bap1_segment_location[sample_anno$tcga_id == sample_id] <-
+        segment_location
+      sample_anno$bap1_segment_width[sample_anno$tcga_id == sample_id] <-
+        segment_width
+    }
+  }
+  cat(sprintf("%s complete", cohort), "\n")
+}
+```
+
+Now, save this intermediate per-sample annotation for later use and will update it in subsequent steps.
+
+```{r}
+write.table(sample_anno, file = "sample_anno.txt", sep = "\t", row.names = FALSE)
+```
