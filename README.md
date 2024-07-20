@@ -1,5 +1,5 @@
 # Expanded detection and impact of *BAP1* alterations in cancer
-Code for the project is available in the subdirectories here, provided in Quarto markdown (qmd) format. \
+Code for the project is available in the subdirectories here, provided in Quarto markdown (qmd), html, and pdf formats. \
 Code is also available along with large file fize data on [Zenodo](https://zenodo.org/doi/10.5281/zenodo.10175692).
 
 ## Updates
