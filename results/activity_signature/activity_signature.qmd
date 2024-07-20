@@ -1,0 +1,815 @@
+---
+title: "Activity signature"
+author: "Ian R. Sturgill"
+format: html
+editor: visual
+---
+
+# Purpose
+
+Here we perform differential expression analysis to identify genes associated with a *BAP1* alteration molecular signature. We then summarize signatures as per-sample *BAP1* activity scores and perform downstream analyses.
+
+# Set-up
+
+We first need the sample annotations that we have compiled from alteration_classification.qmd.
+
+```{r}
+# renv::activate() # Activate R environment if necessary
+library(data.table)
+library(BiocParallel)
+register(MulticoreParam(4))
+# Use SnowParam instead if running in Windows
+# register(SnowParam(4)) 
+
+sample_anno <- fread("../alteration_classification/sample_anno.txt")
+```
+
+We'll add tumor type-specific subtype annotations:
+
+```{r}
+subtype_dir <- "../../data/subtype_annotation"
+sample_anno$subtype <- NA
+cohorts <- sort(unique(sample_anno$cohort))
+
+for (cohort in cohorts) {
+  cohort_lower <- tolower(strsplit(cohort, "-")[[1]][2])
+  subtypes <- sprintf("%s/%s_coldata.txt", subtype_dir, cohort_lower)
+  if (file.exists(subtypes)) {
+    subtypes <- fread(subtypes)
+    for (sample_id in subtypes$tcga_id) {
+      if (sample_id %in% substr(sample_anno$tcga_id, 1, 12) & 
+          ncol(subtypes) == 2) {
+        sample_anno$subtype[substr(sample_anno$tcga_id, 1, 12) == sample_id] <-
+          as.character(subtypes[subtypes$tcga_id == sample_id, 2])
+      }
+      else if (sample_id %in% substr(sample_anno$tcga_id, 1, 12) &
+               ncol(subtypes == 3)) {
+        sample_anno$subtype[substr(sample_anno$tcga_id, 1, 12) == sample_id] <-
+          as.character(subtypes[subtypes$tcga_id == sample_id, 3])
+      }
+    }
+  }
+}
+
+cohort_short <- c()
+for (cohort in sample_anno$cohort) {
+  cohort_short <- c(cohort_short, strsplit(cohort, "-")[[1]][2])
+}
+sample_anno$subtype <- sprintf("%s_%s", cohort_short, sample_anno$subtype)
+```
+
+# Differential expression with DESeq2
+
+### Mutations vs. unaltered
+
+Then we want to find the subset of tumor types that have a higher contribution of mutations to assess *BAP1*-specific expression patterns. We will combine both mutation and mutation+copy number loss samples into a single "mutation-positive" group.
+
+```{r}
+mutation_cohorts <- c("TCGA-CHOL", "TCGA-KIRC", "TCGA-LIHC", 
+                      "TCGA-MESO", "TCGA-UVM")
+
+# Exclude samples with insufficient annotations and CN-only samples
+mutation_anno <- sample_anno[sample_anno$cohort %in% mutation_cohorts &
+                               !is.na(sample_anno$log2_bap1) &
+                               !is.na(sample_anno$purity) &
+                               !is.na(sample_anno$alteration_type) &
+                               !grepl("NA", sample_anno$subtype) &
+                               sample_anno$alteration_type != "copynumber", ]
+
+mutation_anno <- mutation_anno[(grepl("mutation", mutation_anno$alteration_type) &
+                                  mutation_anno$low_expresser == TRUE) | 
+                                 mutation_anno$alteration_type == "unaltered",]
+
+
+read_rna <- function(counts_file) {
+  # Reading the counts data in using this method is faster but creates an extra
+  # column for the rownames, so we adjust this below
+  rna <- suppressWarnings(as.data.frame(fread(counts_file)))
+  rownames(rna) <- rna$V1
+  rna <- rna[, -1]
+  return(rna)
+}
+
+rna_dir <- "../../data/rnaseq/merged_raw"
+
+for (cohort in mutation_cohorts) {
+  rna <- sprintf("%s/%s_merged_counts.txt", rna_dir, cohort)
+  rna <- read_rna(rna)
+  rna <- rna[, colnames(rna) %in% mutation_anno$tcga_id]
+  
+  if (cohort == mutation_cohorts[1]) {
+    rna_combined <- rna
+  }
+  else {
+    rna_combined <- cbind(rna_combined, rna)
+  }
+  cat(sprintf("%s complete", cohort), "\n")
+}
+```
+
+```{r}
+rna_combined <- rna_combined[, mutation_anno$tcga_id]
+rna_combined <- rna_combined[which(!(duplicated(gsub("\\..*", "", 
+                                                     rownames(rna_combined))))), ]
+rownames(rna_combined) <- gsub("\\..*", "", rownames(rna_combined))
+mutation_anno <- as.data.frame(mutation_anno)
+rownames(mutation_anno) <- mutation_anno$tcga_id
+
+# Create a single group of samples consisting of mut-only and mut+CN
+mutation_anno$alteration_type[mutation_anno$alteration_type == "mutation+copynumber"] <- "mutation"
+```
+
+```{r}
+#| eval: false
+library(DESeq2)
+
+dds <- DESeqDataSetFromMatrix(countData = rna_combined,
+                              colData = mutation_anno,
+                              design = ~ subtype + purity + alteration_type)
+
+# Explicitly set unaltered group as relative reference - therefore, upregulated genes are up in mutant samples relative to unaltered
+dds$alteration_type <- factor(dds$alteration_type, levels = c("unaltered", "mutation"))
+# Filter out low-count genes (must have >= 10 counts in the number of samples equal to the smallest group size -- here, samples with a mutation)
+smallest_group_size <- sum(dds$alteration_type == "mutation")
+
+keep <- rowSums(counts(dds) >= 10) >= smallest_group_size
+dds <- dds[keep, ]
+dds <- DESeq(dds, parallel = TRUE)
+saveRDS(dds, file = "mut_vs_unaltered_dds.rds")
+```
+
+```{r}
+#| eval: false
+# Compute and write results
+library(apeglm)
+library(annotables)
+
+res <- results(dds, 
+               name = "alteration_type_mutation_vs_unaltered")
+resLFC <- lfcShrink(dds, 
+                    coef = "alteration_type_mutation_vs_unaltered", 
+                    res = res,
+                    type = "apeglm")
+
+# Annotate genes and filter to protein-coding genes
+res <- res[rownames(res) %in% grch38$ensgene[grch38$biotype == "protein_coding"], ]
+resLFC <- resLFC[rownames(resLFC) %in% grch38$ensgene[grch38$biotype == "protein_coding"], ]
+grch38_cohort <- as.data.frame(copy(grch38))
+grch38_cohort <- grch38_cohort[!duplicated(grch38_cohort$ensgene), ]
+rownames(grch38_cohort) <- grch38_cohort$ensgene
+grch38_cohort <- grch38_cohort[rownames(res), ]
+res$symbol <- grch38_cohort$symbol
+res$description <- grch38_cohort$description
+
+# Repeat the same annotation for resLFC which may have different rownames
+grch38_cohort <- as.data.frame(copy(grch38))
+grch38_cohort <- grch38_cohort[!duplicated(grch38_cohort$ensgene), ]
+rownames(grch38_cohort) <- grch38_cohort$ensgene
+grch38_cohort <- grch38_cohort[rownames(res), ]
+resLFC$symbol <- grch38_cohort$symbol
+resLFC$description <- grch38_cohort$description
+res <- res[!is.na(res$symbol) & !is.na(res$padj), ]
+resLFC <- resLFC[!is.na(resLFC$symbol) & !is.na(resLFC$padj), ]
+write.table(res, file = "de_genes_mut_vs_unaltered.txt", sep = "\t")
+write.table(resLFC, file = "de_genes_shrink_mut_vs_unaltered.txt", 
+            sep = "\t")
+```
+
+### Activity scores and visualization
+
+Now we'll use mclust to compute *BAP1* activity scores and visualize differences using ComplexHeatmap.
+
+```{r}
+library(mclust)
+set.seed(1)
+
+log2_mediancenter <- function(counts) {
+  counts_transformed <- log2(counts + 1)
+  counts_medians <- apply(counts_transformed, 1, median)
+  counts_transformed <- counts_transformed - counts_medians
+  return(counts_transformed)
+}
+
+mut_counts <- counts(dds, normalized = TRUE)
+    
+mut_counts <- mut_counts[, mutation_anno$tcga_id]
+mut_counts <- mut_counts[rownames(mut_counts) %in% 
+                           rownames(resLFC)[resLFC$padj < 0.05], ]
+
+# We use log2 counts for computing BAP1 mutation scores and median-centered log2 counts for visualization in the heatmap
+mut_counts_log2 <- log2(mut_counts + 1)
+mut_counts_log2mc <- log2_mediancenter(mut_counts)
+
+# Subset of all significant genes in the up direction
+mut_up_genes <- rownames(mut_counts_log2)[rownames(mut_counts_log2) %in% rownames(resLFC)[resLFC$padj < 0.05 & sign(resLFC$log2FoldChange) == "1"]]
+
+# Subset of all significant genes in the down direction
+mut_down_genes <- rownames(mut_counts_log2)[rownames(mut_counts_log2) %in% rownames(resLFC)[resLFC$padj < 0.05 & sign(resLFC$log2FoldChange) == "-1"]]
+
+score_up <- colSums(mut_counts_log2[mut_up_genes, ])
+score_down <- colSums(mut_counts_log2[mut_down_genes, ])
+combined_scores <- score_down - score_up
+
+# We use Mclust to find an approximate threshold between two distributions in the data. In rare cases, a low-value outlier can be assigned to group 2, so we specify that anything below the max value of group 1 should be assigned to group 2
+set.seed(1)
+BIC <- mclustBIC(combined_scores, G = 2)
+mod <- Mclust(combined_scores, x = BIC)
+mod$classification[combined_scores < max(combined_scores[mod$classification == 1])] <- 1
+
+mutation_anno$activity_score <- combined_scores
+mutation_anno$activity_class <- ifelse(mod$classification == 1,
+                                       "Mutant-like", "Wildtype-like")
+mutation_anno <- mutation_anno[order(mutation_anno$activity_score, 
+                                     decreasing = FALSE), ]
+mut_counts_log2mc <- mut_counts_log2mc[, rownames(mutation_anno)]
+```
+
+```{r}
+library(circlize)
+library(ComplexHeatmap)
+
+tcga_colors <- fread("../../data/tcga_colors.txt")
+tcga_col <- tcga_colors$`Hex Colors`
+names(tcga_col) <- tcga_colors$`Study Abbreviation`
+
+mut_cohort <- c()
+for (cohort in mutation_anno$cohort) {
+  mut_cohort <- c(mut_cohort, strsplit(cohort, "-")[[1]][2])
+}
+
+col_fun <- colorRamp2(c(min(mutation_anno$activity_score), 
+                        mean(max(mutation_anno$activity_score[mutation_anno$activity_class == "Mutant-like"]), 
+                             min(mutation_anno$activity_score[mutation_anno$activity_class == "Wildtype-like"])), 
+                        max(mutation_anno$activity_score)), 
+                      c("red", "white", "blue"))
+
+alt_types <- c()
+for (sample_id in mutation_anno$tcga_id) {
+  alt_types <- c(alt_types, 
+                 sample_anno$alteration_type[sample_anno$tcga_id == sample_id])
+}
+
+col_fun2 <- colorRamp2(c(-2, 0, 2), c("blue", "black", "yellow"))
+col_fun3 <- colorRamp2(c(-1, 0, 1), c("lightblue", "black", "yellow"))
+pal_purity <- colorRamp2(c(0, 1), c("white", "steelblue"))
+
+gene_anno <- c()
+for (gene in rownames(mut_counts_log2mc)) {
+  gene_anno <- c(gene_anno,
+                 resLFC$log2FoldChange[rownames(resLFC) == gene])
+}
+
+ha_row <- rowAnnotation(log2FC = sort(gene_anno),
+                        col = list(log2FC = col_fun3))
+
+ha <- HeatmapAnnotation(project = mut_cohort, 
+                        purity = mutation_anno$purity,
+                        alteration_type = alt_types,
+                        col = list(project = tcga_col[names(tcga_col) %in%
+                                                        mut_cohort],
+                                     purity = pal_purity,
+                                     alteration_type = c("copynumber" = "lightgreen",
+                                                         "mutation" = "salmon",
+                                                         "mutation+copynumber" = "darkgreen", "unaltered" = "grey")))
+
+ha_b <- HeatmapAnnotation(mut_sig = mutation_anno$activity_score, 
+                          mut_class = mutation_anno$activity_class,
+                          col = list(mut_sig = col_fun,
+                                     mut_class = c("Mutant-like" = "salmon", 
+                                                   "Wildtype-like" = "grey")))
+
+ht <- Heatmap(as.matrix(mut_counts_log2mc[order(gene_anno), ]),
+              top_annotation = ha, bottom_annotation = ha_b,
+              right_annotation = ha_row,
+              show_column_names = FALSE, show_row_names = FALSE,
+              cluster_rows = FALSE, cluster_columns = FALSE,
+              col = col_fun2, name = "Expression")
+
+pdf("heatmap.pdf")
+draw(ht)
+dev.off()
+```
+
+```{r}
+library(EnhancedVolcano)
+pdf("volcano_bap1.pdf", 
+    paper = "a4r", onefile = FALSE, width = 1920, height = 1080)
+print(EnhancedVolcano(resLFC, lab = resLFC$symbol, x = "log2FoldChange", y = "padj", 
+                      pCutoff = 0.05, FCcutoff = 0.5, legendPosition = "right", 
+                      legendLabels = c("NS", "Log2 FC", 
+                                       "adj. p-value", "adj. p-value & Log2 FC"), 
+                      max.overlaps = 30, labSize = 3.0,
+                      selectLab = resLFC$symbol[abs(resLFC$log2FoldChange) > 0.5 &
+                                                  resLFC$padj < 0.05]))
+dev.off()
+```
+
+## TCGA activity scoring
+
+Now we will compute activity scores for samples across all of TCGA.
+
+```{r}
+generate_mut_scores <- function(cohort) {
+  set.seed(1)
+  counts <- sprintf("../../data/rnaseq/merged_normalized/%s_merged_normalized.txt", cohort)
+
+  if (file.exists(counts)) {
+    counts <- as.data.frame(fread(counts))
+    counts <- counts[!duplicated(gsub("\\..*", "", counts$V1)), ]
+    rownames(counts) <- counts$V1
+    rownames(counts) <- gsub("\\..*", "", rownames(counts))
+    counts <- counts[rownames(counts) %in% c(mut_up_genes, mut_down_genes), -1]
+    counts_log2 <- log2(counts + 1)
+    score_up <- colSums(counts_log2[mut_up_genes, ], na.rm = TRUE)
+    score_down <- colSums(counts_log2[mut_down_genes, ], na.rm = TRUE)
+    activity_scores <- score_down - score_up
+    df_out <- data.frame(tcga_id = colnames(counts_log2), 
+                         activity_score = activity_scores)
+    return(df_out)
+  }
+}
+```
+
+Now iterate through each cohort and add activity scores to the per-sample annotation:
+
+```{r}
+sample_anno$bap1_activity_score <- NA
+sample_anno$bap1_activity_class <- NA
+
+for (cohort in cohorts) {
+  act_scores <- generate_mut_scores(cohort)
+  for (sample_id in act_scores$tcga_id) {
+    sample_anno$bap1_activity_score[sample_anno$tcga_id == sample_id] <-
+      act_scores$activity_score[act_scores$tcga_id == sample_id]
+  }
+}
+
+sample_anno$bap1_activity_class <- ifelse(sample_anno$bap1_activity_score > max(mutation_anno$activity_score[mutation_anno$activity_class == "Mutant-like"]), 
+                                          "Wildtype-like", "Mutant-like")
+
+write.table(sample_anno, file = "sample_anno.txt", col.names = NA, sep = "\t")
+```
+
+```{r}
+sample_anno <- read.delim("sample_anno.txt")
+```
+
+```{r}
+library(ggplot2)
+library(ggdist)
+
+pdf("alteration_type_bap1_scores.pdf")
+ggplot(sample_anno[!is.na(sample_anno$alteration_type) &
+                     !is.na(sample_anno$bap1_activity_score), ], 
+       aes(x = factor(alteration_type, 
+                      levels = c("unaltered", "copynumber", 
+                                 "mutation+copynumber", "mutation")),
+           y = bap1_activity_score)) + 
+  ggdist::stat_halfeye(
+    adjust = 0.5,
+    width = 0.6,
+    .width = 0,
+    justification = -0.2,
+    point_colour = NA,
+    show.legend = F
+) +
+  xlab("BAP1 alteration type") +
+  ylab("BAP1 activity score") +
+  geom_hline(yintercept = max(mutation_anno$activity_score[mutation_anno$activity_class == "Mutant-like"]),
+             linetype = "dotted") +
+  geom_boxplot(outlier.shape = NA, 
+               width = 0.12, 
+               fill = c("grey", "lightgreen", "salmon", "red")) +
+  theme_classic()
+dev.off()
+```
+
+```{r}
+pdf("bap1_activity_class_expression.pdf")
+ggplot(sample_anno[!is.na(sample_anno$bap1_activity_class) &
+                     !is.na(sample_anno$log2_bap1), ], 
+       aes(x = factor(bap1_activity_class, 
+                      levels = c("Mutant-like", "Wildtype-like")),
+           y = log2_bap1)) + 
+  ggdist::stat_halfeye(
+    adjust = 0.5,
+    width = 0.6,
+    .width = 0,
+    justification = -0.2,
+    point_colour = NA,
+    show.legend = F
+) +
+  xlab("BAP1 activity class") +
+  ylab("Log2 BAP1 RNA expression") +
+  geom_boxplot(outlier.shape = NA, 
+               width = 0.12, 
+               fill = c("salmon", "grey")) +
+  theme_classic()
+dev.off()
+```
+
+## Liver differential expression
+
+```{r}
+lihc_anno <- sample_anno[sample_anno$cohort == "TCGA-LIHC" &
+                               !is.na(sample_anno$log2_bap1) &
+                               !is.na(sample_anno$purity) &
+                               !is.na(sample_anno$alteration_type) &
+                               !grepl("NA", sample_anno$subtype), ]
+lihc_anno <- as.data.frame(lihc_anno)
+rownames(lihc_anno) <- lihc_anno$tcga_id
+
+lihc_rna <- sprintf("%s/%s_merged_counts.txt", rna_dir, "TCGA-LIHC")
+lihc_rna <- read_rna(lihc_rna)
+lihc_rna <- lihc_rna[, colnames(lihc_rna) %in% lihc_anno$tcga_id]
+lihc_rna <- lihc_rna[, lihc_anno$tcga_id]
+lihc_rna <- lihc_rna[which(!(duplicated(gsub("\\..*", "", 
+                                                     rownames(lihc_rna))))), ]
+rownames(lihc_rna) <- gsub("\\..*", "", rownames(lihc_rna))
+
+rownames(lihc_anno) <- lihc_anno$tcga_id
+```
+
+```{r}
+lihc_dds <- DESeqDataSetFromMatrix(countData = lihc_rna,
+                              colData = lihc_anno,
+                              design = ~ subtype + purity + bap1_activity_class)
+
+# Explicitly set unaltered group as relative reference - therefore, upregulated genes are up in mutant samples relative to unaltered
+lihc_dds$bap1_activity_class <- factor(lihc_dds$bap1_activity_class, 
+                                  levels = c("Wildtype-like", "Mutant-like"))
+# Filter out low-count genes (must have >= 10 counts in the number of samples equal to the smallest group size -- here, samples with a mutation)
+smallest_group_size <- sum(lihc_dds$bap1_activity_class == "Mutant-like")
+
+keep <- rowSums(counts(lihc_dds) >= 10) >= smallest_group_size
+lihc_dds <- lihc_dds[keep, ]
+lihc_dds <- DESeq(lihc_dds, parallel = TRUE)
+saveRDS(lihc_dds, file = "lihc_mutlike_vs_nonmutlike.rds")
+```
+
+```{r}
+#| eval: false
+# Compute and write results
+lihc_res <- results(lihc_dds,
+               name = "bap1_activity_class_Mutant.like_vs_Wildtype.like")
+lihc_resLFC <- lfcShrink(lihc_dds, 
+                    coef = "bap1_activity_class_Mutant.like_vs_Wildtype.like", 
+                    res = lihc_res,
+                    type = "apeglm")
+lihc_res <- lihc_res[rownames(lihc_res) %in% 
+                       grch38$ensgene[grch38$biotype == "protein_coding"], ]
+lihc_resLFC <- lihc_resLFC[rownames(lihc_resLFC) %in% 
+                             grch38$ensgene[grch38$biotype == "protein_coding"], ]
+grch38_cohort <- as.data.frame(copy(grch38))
+grch38_cohort <- grch38_cohort[!duplicated(grch38_cohort$ensgene), ]
+rownames(grch38_cohort) <- grch38_cohort$ensgene
+grch38_cohort <- grch38_cohort[rownames(lihc_res), ]
+lihc_res$symbol <- grch38_cohort$symbol
+lihc_res$description <- grch38_cohort$description
+# Repeat the same annotation for resLFC which has different rownames
+grch38_cohort <- as.data.frame(copy(grch38))
+grch38_cohort <- grch38_cohort[!duplicated(grch38_cohort$ensgene), ]
+rownames(grch38_cohort) <- grch38_cohort$ensgene
+grch38_cohort <- grch38_cohort[rownames(lihc_resLFC), ]
+lihc_resLFC$symbol <- grch38_cohort$symbol
+lihc_resLFC$description <- grch38_cohort$description
+lihc_res <- lihc_res[!is.na(lihc_res$symbol) & !is.na(lihc_res$padj), ]
+lihc_resLFC <- lihc_resLFC[!is.na(lihc_resLFC$symbol) & !is.na(lihc_resLFC$padj), ]
+write.table(lihc_res, file = "lihc_de_genes_mut_class_MutlikevsWTlike.txt", 
+            sep = "\t")
+write.table(lihc_resLFC, file = "lihc_de_genes_shrink_mut_class_MutlikevsWTlike.txt", 
+            sep = "\t")
+```
+
+```{r}
+col_fun <- colorRamp2(c(min(lihc_anno$bap1_activity_score), 
+                        mean(max(lihc_anno$bap1_activity_score[lihc_anno$bap1_activity_class == "Mutant-like"]), 
+                             min(lihc_anno$bap1_activity_score[lihc_anno$bap1_activity_class == "Wildtype-like"])), 
+                        max(lihc_anno$bap1_activity_score)), 
+                      c("red", "white", "blue"))
+
+col_fun2 <- colorRamp2(c(-2, 0, 2), c("blue", "black", "yellow"))
+col_fun3 <- colorRamp2(c(-1, 0, 1), c("lightblue", "black", "yellow"))
+pal_purity <- colorRamp2(c(0, 1), c("white", "steelblue"))
+
+lihc_counts <- counts(lihc_dds, normalized = TRUE)
+    
+lihc_counts <- lihc_counts[, lihc_anno$tcga_id]
+lihc_counts <- lihc_counts[rownames(lihc_counts) %in% 
+                           rownames(lihc_resLFC)[lihc_resLFC$padj < 0.05], ]
+
+lihc_counts_log2mc <- log2_mediancenter(lihc_counts)
+
+gene_anno <- c()
+for (gene in rownames(lihc_counts_log2mc)) {
+  gene_anno <- c(gene_anno,
+                 lihc_resLFC$log2FoldChange[rownames(lihc_resLFC) == gene])
+}
+
+lihc_anno <- lihc_anno[order(lihc_anno$bap1_activity_score, decreasing = FALSE), ]
+lihc_counts_log2mc <- lihc_counts_log2mc[, rownames(lihc_anno)]
+
+ha_row <- rowAnnotation(log2FC = sort(gene_anno),
+                        col = list(log2FC = col_fun3))
+
+ha <- HeatmapAnnotation(subtype = lihc_anno$subtype,
+                        purity = lihc_anno$purity,
+                        alteration_type = lihc_anno$alteration_type,
+                        col = list(subtype = c("LIHC_Liver.Like" = "darkgrey",
+                                               "LIHC_Blast.Like" = "salmon",
+                                               "LIHC_CHOL.Like" = "darkgreen"),
+                                   purity = pal_purity,
+                                     alteration_type = c("copynumber" = "lightgreen",
+                                                         "mutation" = "salmon",
+                                                         "mutation+copynumber" = "darkgreen", "unaltered" = "grey")))
+
+ha_b <- HeatmapAnnotation(mut_sig = lihc_anno$bap1_activity_score, 
+                          mut_class = lihc_anno$bap1_activity_class,
+                          col = list(mut_sig = col_fun,
+                                     mut_class = c("Mutant-like" = "salmon", 
+                                                   "Wildtype-like" = "grey")))
+
+ht <- Heatmap(as.matrix(lihc_counts_log2mc[order(gene_anno), ]),
+              top_annotation = ha, bottom_annotation = ha_b,
+              right_annotation = ha_row,
+              show_column_names = FALSE, show_row_names = FALSE,
+              cluster_rows = FALSE, cluster_columns = FALSE,
+              col = col_fun2, name = "Expression")
+
+draw(ht)
+```
+
+```{r}
+pdf("heatmap_lihc.pdf")
+draw(ht)
+dev.off()
+```
+
+# GSE90047 - embryonic mouse
+
+## Bulk RNA-seq
+
+```{r}
+mouse_bulk <- read.delim("../../data/gse90047/Bulk-cell_RNA-seq_Read_Count.txt")
+
+mut_up_gene_symbols <- c()
+mut_down_gene_symbols <- c()
+for (i in mut_up_genes) {
+  mut_up_gene_symbols <- c(mut_up_gene_symbols,
+                           grch38$symbol[grch38$ensgene == i])
+}
+for (i in mut_down_genes) {
+  mut_down_gene_symbols <- c(mut_down_gene_symbols,
+                           grch38$symbol[grch38$ensgene == i])
+}
+mut_up_gene_symbols <- mut_up_gene_symbols[!is.na(mut_up_gene_symbols) &
+                                             mut_up_gene_symbols != ""]
+mut_up_gene_symbols <- mut_up_gene_symbols[!duplicated(mut_up_gene_symbols)]
+
+mut_down_gene_symbols <- mut_down_gene_symbols[!is.na(mut_down_gene_symbols) &
+                                             mut_down_gene_symbols != ""]
+mut_down_gene_symbols <- mut_down_gene_symbols[!duplicated(mut_down_gene_symbols)]
+
+mouse_bulk$Symbol <- toupper(mouse_bulk$Symbol)
+mouse_bulk <- mouse_bulk[!duplicated(mouse_bulk$Symbol), ]
+rownames(mouse_bulk) <- mouse_bulk$Symbol
+
+mouse_bulk <- mouse_bulk[, -c(1:3)]
+mouse_anno <- data.frame(sample = colnames(mouse_bulk),
+                         row.names = colnames(mouse_bulk))
+mouse_dds <- DESeqDataSetFromMatrix(countData = mouse_bulk,
+                                    colData = mouse_anno,
+                                    design = ~1)
+
+mouse_dds <- estimateSizeFactors(mouse_dds)
+mouse_counts <- counts(mouse_dds, normalized = TRUE)
+mouse_counts_log2 <- log2(mouse_counts + 1)
+
+mouse_score_up <- colSums(mouse_counts_log2[mut_up_gene_symbols[mut_up_gene_symbols %in% rownames(mouse_counts_log2)], ], na.rm = TRUE)
+
+mouse_score_down <- colSums(mouse_counts_log2[mut_down_gene_symbols[mut_down_gene_symbols %in% rownames(mouse_counts_log2)], ], na.rm = TRUE)
+
+mouse_act_scores <- mouse_score_down - mouse_score_up
+mouse_df <- data.frame(bap1_activity_score = mouse_act_scores, 
+                       sample = colnames(mouse_counts))
+
+mouse_timepoint <- c()
+for (i in mouse_df$sample) {
+  mouse_timepoint <- c(mouse_timepoint, as.numeric(substr(i, 2, 5)))
+}
+mouse_df$timepoint <- mouse_timepoint
+```
+
+```{r}
+plot(mouse_df$timepoint, mouse_df$bap1_activity_score, pch = 16, xlab = "Embryonic timepoint (day)", ylab = "BAP1 activity score")
+```
+
+## Single-cell RNA-seq
+
+```{r}
+sc_counts <- read.delim("../../data/gse90047/Single-cell_RNA-seq_Read_Count.txt")
+sc_anno <- read.delim("../../data/gse90047/GSE90047_singlecell_anno.txt")
+
+sc_genes <- sc_counts[, 1:3]
+rownames(sc_counts) <- sc_counts$ID
+sc_counts <- sc_counts[, -c(1:3)]
+rownames(sc_anno) <- sc_anno$Sample_title
+sc_counts <- sc_counts[, rownames(sc_anno)]
+```
+
+```{r}
+sc_anno$Sample_characteristics_ch1 <- gsub("embryonic day: ", "",
+                                           sc_anno$Sample_characteristics_ch1)
+
+sc_anno$Sample_characteristics_ch1.4 <- gsub("putative cell type: ", "",
+                                             sc_anno$Sample_characteristics_ch1.4)
+```
+
+```{r}
+sc_dds <- DESeqDataSetFromMatrix(countData = sc_counts,
+                                 colData = sc_anno,
+                                 design = ~ 1)
+
+sc_vsd <- vst(sc_dds, blind = FALSE)
+```
+
+```{r}
+mut_up_gene_symbols <- c()
+mut_down_gene_symbols <- c()
+for (i in mut_up_genes) {
+  mut_up_gene_symbols <- c(mut_up_gene_symbols,
+                           grch38$symbol[grch38$ensgene == i])
+}
+for (i in mut_down_genes) {
+  mut_down_gene_symbols <- c(mut_down_gene_symbols,
+                           grch38$symbol[grch38$ensgene == i])
+}
+mut_up_gene_symbols <- mut_up_gene_symbols[!is.na(mut_up_gene_symbols) &
+                                             mut_up_gene_symbols != ""]
+mut_up_gene_symbols <- mut_up_gene_symbols[!duplicated(mut_up_gene_symbols)]
+
+mut_down_gene_symbols <- mut_down_gene_symbols[!is.na(mut_down_gene_symbols) &
+                                             mut_down_gene_symbols != ""]
+mut_down_gene_symbols <- mut_down_gene_symbols[!duplicated(mut_down_gene_symbols)]
+
+mut_up_mouse <- grcm38$ensgene[toupper(grcm38$symbol) %in% mut_up_gene_symbols]
+mut_down_mouse <- grcm38$ensgene[toupper(grcm38$symbol) %in% mut_down_gene_symbols]
+
+mut_up_mouse <- mut_up_mouse[!duplicated(mut_up_mouse) &
+                               mut_up_mouse %in% rownames(assay(sc_dds))]
+mut_down_mouse <- mut_down_mouse[!duplicated(mut_down_mouse) &
+                                   mut_down_mouse %in% rownames(assay(sc_dds))]
+```
+
+```{r}
+mouse_sc_log2 <- log2(assay(sc_dds, normalized = TRUE) + 1)
+
+mouse_score_up <- colSums(mouse_sc_log2[mut_up_mouse, ], na.rm = TRUE)
+
+mouse_score_down <- colSums(mouse_sc_log2[mut_down_mouse, ], na.rm = TRUE)
+
+mouse_act_scores <- mouse_score_down - mouse_score_up
+sc_vsd$sc_act_scores <- mouse_act_scores
+```
+
+```{r}
+sc_counts_norm <- assay(sc_dds, normalized = TRUE)
+
+for (i in sc_dds$Sample_title) {
+  sc_vsd$log2_bap1[sc_dds$Sample_title == i] <-
+    log2(sc_counts_norm["ENSMUSG00000021901", i] + 1)
+}
+
+sc_plot <- plotPCA(sc_vsd, intgroup = c("Sample_characteristics_ch1",
+                                        "Sample_characteristics_ch1.4",
+                                        "log2_bap1",
+                                        "sc_act_scores"),
+                   returnData = TRUE)
+
+percentVar <- round(100 * attr(sc_plot, "percentVar"))
+ggplot(sc_plot, aes(PC1, PC2, color = sc_act_scores, 
+                    shape = Sample_characteristics_ch1.4)) +
+  geom_point(size=3) +
+  xlab(paste0("PC1: ",percentVar[1],"% variance")) +
+  ylab(paste0("PC2: ",percentVar[2],"% variance")) + 
+  coord_fixed()
+```
+
+# GSE215785
+
+```{r}
+gse215785 <- read.delim("../../data/gse215785/GSE215785_processed_raw_data_FLC.csv",
+                        sep = ",", row.names = 1)
+gse215785_descriptions <- read.delim("../../data/gse215785/sample_descriptions.txt")
+gse215785[is.na(gse215785)] <- 0
+gse215785_anno <- data.frame(sample_id = gse215785_descriptions$sample_id,
+                             sample_description = gse215785_descriptions$sample_description,
+                             row.names = colnames(gse215785))
+gse215785_anno$sample_type <- c(rep("PRKAR2A", 3), rep("BAP1KO", 3), rep("Fusion", 2), rep("DoubleKO", 3), rep("DoubleKO_DUC", 3), rep("WT", 2), rep("WT_DUC", 2), rep("BAP1KO", 2), rep("Fusion", 3), "PRKAR2A", rep("WT", 2), rep("WT_DUC", 2), rep("DoubleKO", 2), "DoubleKO_DUC")
+
+mut_up_gse215785 <- mut_up_gene_symbols[mut_up_gene_symbols %in% 
+                                          rownames(gse215785)]
+mut_down_gse215785 <- mut_down_gene_symbols[mut_down_gene_symbols %in% 
+                                          rownames(gse215785)]
+
+dds_gse215785 <- DESeqDataSetFromMatrix(countData = gse215785,
+                                        colData = gse215785_anno,
+                                        design = ~ 1)
+
+dds_gse215785 <- estimateSizeFactors(dds_gse215785)
+gse215785_counts <- counts(dds_gse215785, normalized = TRUE)
+gse215785_counts_log2 <- log2(gse215785_counts + 1)
+
+score_up <- colSums(gse215785_counts_log2[mut_up_gse215785, ], na.rm = TRUE)
+score_down <- colSums(gse215785_counts_log2[mut_down_gse215785, ], na.rm = TRUE)
+mut_scores <- score_down - score_up
+
+gse215785_anno$mutation_score <- mut_scores
+```
+
+```{r}
+gse215785_anno <- gse215785_anno[!grepl("DUC", gse215785_anno$sample_type),]
+```
+
+```{r}
+boxplot(gse215785_anno$mutation_score ~ gse215785_anno$sample_type, 
+        outline = FALSE, xlab = "Sample type", ylab = "BAP1 mutation score")
+stripchart(gse215785_anno$mutation_score ~ gse215785_anno$sample_type,
+           add = TRUE, vertical = TRUE, method = "jitter", pch = 16)
+```
+
+# GSE129457
+
+```{r}
+gse129457_dir <- "../../data/gse129457/"
+gse129457_files <- dir(gse129457_dir)
+
+gse129457_anno <- data.frame(sample = gsub("_coutb.csv.gz", "",
+                                           gse129457_files))
+
+gse129457_anno$sample_type <- c(rep("WT", 3), rep("BAP1mut", 3), rep("BAP1mut+24hrDox", 2))
+
+rownames(gse129457_anno) <- gse129457_anno$sample
+
+read_counts <- function(counts_file) {
+  counts_file <- file.path(gse129457_dir, counts_file)
+  sample_counts <- read.delim(counts_file, sep = ";")
+  return(sample_counts)
+}
+
+for (counts_file in gse129457_files) {
+  temp_counts <- read_counts(counts_file)
+  if (exists("gse129457_genes")) {
+    gse129457_genes <- intersect(gse129457_genes, temp_counts$GENEID)
+  }
+  else {
+    gse129457_genes <- temp_counts$GENEID
+  }
+}
+
+gse129457_genes <- gsub("\\_.*", "", gse129457_genes)
+mut_up_gse129457 <- mut_up_gene_symbols[mut_up_gene_symbols %in% 
+                                          gse129457_genes]
+mut_down_gse129457 <- mut_down_gene_symbols[mut_down_gene_symbols %in% 
+                                          gse129457_genes]
+```
+
+```{r}
+for (counts_file in gse129457_files) {
+  temp_counts <- read_counts(counts_file)
+  temp_counts$GENEID <- gsub("\\_.*", "", temp_counts$GENEID)
+  rownames(temp_counts) <- temp_counts$GENEID
+  temp_counts <- temp_counts[c(mut_up_gse129457, mut_down_gse129457), ]
+  if (exists("gse129457")) {
+    gse129457 <- cbind(gse129457, temp_counts[, 2])
+  }
+  else {
+    gse129457 <- temp_counts
+  }
+}
+```
+
+```{r}
+gse129457 <- gse129457[, 2:ncol(gse129457)]
+colnames(gse129457) <- gse129457_anno$sample
+dds_gse129457 <- DESeqDataSetFromMatrix(countData = gse129457,
+                                        colData = gse129457_anno,
+                                        design = ~ 1)
+
+dds_gse129457 <- estimateSizeFactors(dds_gse129457)
+gse129457_counts <- counts(dds_gse129457, normalized = TRUE)
+gse129457_counts_log2 <- log2(gse129457_counts + 1)
+
+score_up <- colSums(gse129457_counts_log2[mut_up_gse129457, ], na.rm = TRUE)
+score_down <- colSums(gse129457_counts_log2[mut_down_gse129457, ], na.rm = TRUE)
+mut_scores <- score_down - score_up
+
+gse129457_anno$mutation_score <- mut_scores
+```
+
+```{r}
+boxplot(gse129457_anno$mutation_score ~ gse129457_anno$sample_type, 
+        outline = FALSE, xlab = "Sample type", ylab = "BAP1 mutation score")
+stripchart(gse129457_anno$mutation_score ~ gse129457_anno$sample_type,
+           add = TRUE, vertical = TRUE, method = "jitter", pch = 16)
+```
