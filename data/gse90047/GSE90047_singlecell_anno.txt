@@ -1,0 +1,530 @@
+Sample_title	Sample_geo_accession	Sample_source_name_ch1	Sample_organism_ch1	Sample_characteristics_ch1	Sample_characteristics_ch1	Sample_characteristics_ch1	Sample_characteristics_ch1	Sample_characteristics_ch1	Sample_platform_id	ID_REF
+E10.5D_1_01	GSM2396088	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396088
+E10.5D_1_02	GSM2396089	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396089
+E10.5D_1_03	GSM2396090	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396090
+E10.5D_1_04	GSM2396091	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396091
+E10.5D_1_05	GSM2396092	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396092
+E10.5D_1_06	GSM2396093	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396093
+E10.5D_1_07	GSM2396094	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396094
+E10.5D_1_08	GSM2396095	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396095
+E10.5D_1_09	GSM2396096	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396096
+E10.5D_1_10	GSM2396097	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396097
+E10.5D_1_11	GSM2396098	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396098
+E10.5D_1_12	GSM2396099	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396099
+E10.5D_1_13	GSM2396100	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396100
+E10.5D_1_14	GSM2396101	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396101
+E10.5D_1_15	GSM2396102	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396102
+E10.5D_1_16	GSM2396103	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396103
+E10.5D_2_01	GSM2396104	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396104
+E10.5D_2_02	GSM2396105	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396105
+E10.5D_2_03	GSM2396106	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396106
+E10.5D_2_04	GSM2396107	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396107
+E10.5D_2_05	GSM2396108	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396108
+E10.5D_2_06	GSM2396109	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396109
+E10.5D_2_07	GSM2396110	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396110
+E10.5D_2_08	GSM2396111	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396111
+E10.5D_2_09	GSM2396112	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396112
+E10.5D_2_10	GSM2396113	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396113
+E10.5D_2_11	GSM2396114	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396114
+E10.5D_2_12	GSM2396115	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396115
+E10.5D_2_13	GSM2396116	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396116
+E10.5D_2_14	GSM2396117	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396117
+E10.5D_2_15	GSM2396118	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396118
+E10.5D_2_16	GSM2396119	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396119
+E10.5D_2_17	GSM2396120	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396120
+E10.5D_2_18	GSM2396121	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396121
+E10.5D_2_19	GSM2396122	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396122
+E10.5D_2_20	GSM2396123	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396123
+E10.5D_2_21	GSM2396124	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396124
+E10.5D_2_22	GSM2396125	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396125
+E10.5D_3_01	GSM2396126	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396126
+E10.5D_3_02	GSM2396127	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396127
+E10.5D_3_03	GSM2396128	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396128
+E10.5D_3_04	GSM2396129	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396129
+E10.5D_3_05	GSM2396130	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396130
+E10.5D_3_06	GSM2396131	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396131
+E10.5D_3_07	GSM2396132	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396132
+E10.5D_3_08	GSM2396133	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396133
+E10.5D_3_09	GSM2396134	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396134
+E10.5D_3_10	GSM2396135	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396135
+E10.5D_3_11	GSM2396136	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396136
+E10.5D_3_12	GSM2396137	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396137
+E10.5D_3_13	GSM2396138	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396138
+E10.5D_3_14	GSM2396139	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396139
+E10.5D_3_15	GSM2396140	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396140
+E10.5D_3_16	GSM2396141	Liver	Mus musculus	embryonic day: E10.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396141
+E11.5D_1_01	GSM2396142	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396142
+E11.5D_1_02	GSM2396143	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396143
+E11.5D_1_03	GSM2396144	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396144
+E11.5D_1_04	GSM2396145	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396145
+E11.5D_1_05	GSM2396146	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396146
+E11.5D_1_06	GSM2396147	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396147
+E11.5D_1_07	GSM2396148	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396148
+E11.5D_1_08	GSM2396149	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396149
+E11.5D_1_09	GSM2396150	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396150
+E11.5D_1_10	GSM2396151	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396151
+E11.5D_1_11	GSM2396152	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396152
+E11.5D_1_12	GSM2396153	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396153
+E11.5D_1_13	GSM2396154	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396154
+E11.5D_1_14	GSM2396155	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396155
+E11.5D_1_15	GSM2396156	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396156
+E11.5D_1_16	GSM2396157	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396157
+E11.5D_2_01	GSM2396158	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396158
+E11.5D_2_02	GSM2396159	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396159
+E11.5D_2_03	GSM2396160	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396160
+E11.5D_2_04	GSM2396161	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396161
+E11.5D_2_05	GSM2396162	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396162
+E11.5D_2_06	GSM2396163	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396163
+E11.5D_2_07	GSM2396164	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396164
+E11.5D_2_08	GSM2396165	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396165
+E11.5D_2_09	GSM2396166	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396166
+E11.5D_2_10	GSM2396167	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396167
+E11.5D_2_11	GSM2396168	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396168
+E11.5D_2_12	GSM2396169	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396169
+E11.5D_2_13	GSM2396170	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396170
+E11.5D_3_01	GSM2396171	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396171
+E11.5D_3_02	GSM2396172	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396172
+E11.5D_3_03	GSM2396173	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396173
+E11.5D_3_04	GSM2396174	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396174
+E11.5D_3_05	GSM2396175	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396175
+E11.5D_3_06	GSM2396176	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396176
+E11.5D_3_07	GSM2396177	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396177
+E11.5E_2_01	GSM2396178	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396178
+E11.5E_2_02	GSM2396179	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396179
+E11.5E_2_03	GSM2396180	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396180
+E11.5E_2_04	GSM2396181	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396181
+E11.5E_2_05	GSM2396182	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396182
+E11.5E_2_06	GSM2396183	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396183
+E11.5E_2_07	GSM2396184	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396184
+E11.5E_2_08	GSM2396185	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396185
+E11.5E_2_09	GSM2396186	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396186
+E11.5E_2_10	GSM2396187	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396187
+E11.5E_2_11	GSM2396188	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396188
+E11.5E_2_12	GSM2396189	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396189
+E11.5E_2_13	GSM2396190	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396190
+E11.5E_2_14	GSM2396191	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396191
+E11.5E_2_15	GSM2396192	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396192
+E11.5E_2_16	GSM2396193	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396193
+E11.5E_2_17	GSM2396194	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396194
+E11.5E_2_18	GSM2396195	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396195
+E11.5E_2_19	GSM2396196	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396196
+E11.5E_2_20	GSM2396197	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396197
+E11.5E_2_21	GSM2396198	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396198
+E11.5E_2_22	GSM2396199	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396199
+E11.5E_2_23	GSM2396200	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396200
+E11.5E_2_24	GSM2396201	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396201
+E11.5E_2_25	GSM2396202	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396202
+E11.5E_2_26	GSM2396203	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396203
+E11.5E_3_01	GSM2396204	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396204
+E11.5E_3_02	GSM2396205	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396205
+E11.5E_3_03	GSM2396206	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396206
+E11.5E_3_04	GSM2396207	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396207
+E11.5E_3_05	GSM2396208	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396208
+E11.5E_3_06	GSM2396209	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396209
+E11.5E_3_07	GSM2396210	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396210
+E11.5E_3_08	GSM2396211	Liver	Mus musculus	embryonic day: E11.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396211
+E12.5D_1_01	GSM2396212	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396212
+E12.5D_1_02	GSM2396213	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396213
+E12.5D_1_03	GSM2396214	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396214
+E12.5D_1_04	GSM2396215	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396215
+E12.5D_1_05	GSM2396216	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396216
+E12.5D_1_06	GSM2396217	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396217
+E12.5D_1_07	GSM2396218	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396218
+E12.5D_1_08	GSM2396219	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396219
+E12.5D_1_09	GSM2396220	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396220
+E12.5D_1_10	GSM2396221	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396221
+E12.5D_1_11	GSM2396222	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396222
+E12.5D_1_12	GSM2396223	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396223
+E12.5D_1_13	GSM2396224	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396224
+E12.5D_1_14	GSM2396225	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396225
+E12.5D_1_15	GSM2396226	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396226
+E12.5D_2_01	GSM2396227	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396227
+E12.5D_2_02	GSM2396228	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396228
+E12.5D_2_03	GSM2396229	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396229
+E12.5D_2_04	GSM2396230	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396230
+E12.5D_2_05	GSM2396231	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396231
+E12.5D_2_06	GSM2396232	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396232
+E12.5E_1_01	GSM2396233	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396233
+E12.5E_1_02	GSM2396234	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396234
+E12.5E_1_03	GSM2396235	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396235
+E12.5E_1_04	GSM2396236	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396236
+E12.5E_1_05	GSM2396237	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396237
+E12.5E_1_06	GSM2396238	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396238
+E12.5E_1_07	GSM2396239	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396239
+E12.5E_1_08	GSM2396240	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396240
+E12.5E_1_09	GSM2396241	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396241
+E12.5E_1_10	GSM2396242	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396242
+E12.5E_1_11	GSM2396243	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396243
+E12.5E_1_12	GSM2396244	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396244
+E12.5E_1_13	GSM2396245	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396245
+E12.5E_1_14	GSM2396246	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396246
+E12.5E_2_01	GSM2396247	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396247
+E12.5E_2_02	GSM2396248	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396248
+E12.5E_2_03	GSM2396249	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396249
+E12.5E_2_04	GSM2396250	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396250
+E12.5E_2_05	GSM2396251	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396251
+E12.5E_2_06	GSM2396252	Liver	Mus musculus	embryonic day: E12.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396252
+E13.5D_1_01	GSM2396253	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396253
+E13.5D_1_02	GSM2396254	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396254
+E13.5D_1_03	GSM2396255	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396255
+E13.5D_1_04	GSM2396256	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396256
+E13.5D_1_05	GSM2396257	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396257
+E13.5D_1_06	GSM2396258	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396258
+E13.5D_1_07	GSM2396259	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396259
+E13.5D_1_08	GSM2396260	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396260
+E13.5D_1_09	GSM2396261	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396261
+E13.5D_1_10	GSM2396262	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396262
+E13.5D_1_11	GSM2396263	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396263
+E13.5D_1_12	GSM2396264	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396264
+E13.5D_1_13	GSM2396265	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396265
+E13.5D_2_01	GSM2396266	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396266
+E13.5D_2_02	GSM2396267	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396267
+E13.5D_2_03	GSM2396268	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396268
+E13.5D_2_04	GSM2396269	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396269
+E13.5D_2_05	GSM2396270	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396270
+E13.5D_2_06	GSM2396271	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396271
+E13.5D_2_07	GSM2396272	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396272
+E13.5D_2_08	GSM2396273	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396273
+E13.5D_2_09	GSM2396274	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396274
+E13.5D_2_10	GSM2396275	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396275
+E13.5D_2_11	GSM2396276	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396276
+E13.5D_2_12	GSM2396277	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396277
+E13.5D_2_13	GSM2396278	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396278
+E13.5D_2_14	GSM2396279	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396279
+E13.5D_2_15	GSM2396280	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396280
+E13.5D_2_16	GSM2396281	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396281
+E13.5D_2_17	GSM2396282	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396282
+E13.5D_2_18	GSM2396283	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396283
+E13.5D_3_01	GSM2396284	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396284
+E13.5D_3_02	GSM2396285	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396285
+E13.5D_3_03	GSM2396286	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396286
+E13.5D_3_04	GSM2396287	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396287
+E13.5D_3_05	GSM2396288	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396288
+E13.5D_3_06	GSM2396289	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396289
+E13.5D_3_07	GSM2396290	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396290
+E13.5D_3_08	GSM2396291	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396291
+E13.5E_2_01	GSM2396292	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396292
+E13.5E_2_02	GSM2396293	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396293
+E13.5E_2_03	GSM2396294	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396294
+E13.5E_2_04	GSM2396295	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396295
+E13.5E_2_05	GSM2396296	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396296
+E13.5E_2_06	GSM2396297	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396297
+E13.5E_2_07	GSM2396298	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396298
+E13.5E_2_08	GSM2396299	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396299
+E13.5E_2_09	GSM2396300	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396300
+E13.5E_2_10	GSM2396301	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396301
+E13.5E_2_11	GSM2396302	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396302
+E13.5E_2_12	GSM2396303	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396303
+E13.5E_2_13	GSM2396304	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396304
+E13.5E_2_14	GSM2396305	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396305
+E13.5E_2_15	GSM2396306	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396306
+E13.5E_2_16	GSM2396307	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396307
+E13.5E_2_17	GSM2396308	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396308
+E13.5E_2_18	GSM2396309	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396309
+E13.5E_3_01	GSM2396310	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396310
+E13.5E_3_02	GSM2396311	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396311
+E13.5E_3_03	GSM2396312	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396312
+E13.5E_3_04	GSM2396313	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396313
+E13.5E_3_05	GSM2396314	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396314
+E13.5E_3_06	GSM2396315	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396315
+E13.5E_3_07	GSM2396316	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396316
+E13.5E_3_08	GSM2396317	Liver	Mus musculus	embryonic day: E13.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396317
+E14.5D_1_01	GSM2396318	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396318
+E14.5D_1_02	GSM2396319	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396319
+E14.5D_1_03	GSM2396320	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396320
+E14.5D_1_04	GSM2396321	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396321
+E14.5D_1_05	GSM2396322	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396322
+E14.5D_1_06	GSM2396323	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396323
+E14.5D_1_07	GSM2396324	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396324
+E14.5D_1_08	GSM2396325	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396325
+E14.5D_1_09	GSM2396326	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396326
+E14.5D_1_10	GSM2396327	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396327
+E14.5D_2_01	GSM2396328	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396328
+E14.5D_2_02	GSM2396329	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396329
+E14.5D_2_03	GSM2396330	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396330
+E14.5E_1_01	GSM2396331	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396331
+E14.5E_1_02	GSM2396332	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396332
+E14.5E_1_03	GSM2396333	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396333
+E14.5E_1_04	GSM2396334	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396334
+E14.5E_1_05	GSM2396335	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396335
+E14.5E_1_06	GSM2396336	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396336
+E14.5E_1_07	GSM2396337	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396337
+E14.5E_1_08	GSM2396338	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396338
+E14.5E_1_09	GSM2396339	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396339
+E14.5E_1_10	GSM2396340	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396340
+E14.5E_1_11	GSM2396341	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396341
+E14.5E_1_12	GSM2396342	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396342
+E14.5E_1_13	GSM2396343	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396343
+E14.5E_2_01	GSM2396344	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396344
+E14.5E_2_02	GSM2396345	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396345
+E14.5E_2_03	GSM2396346	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396346
+E14.5E_2_04	GSM2396347	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396347
+E14.5E_2_05	GSM2396348	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396348
+E14.5E_2_06	GSM2396349	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396349
+E14.5E_2_07	GSM2396350	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396350
+E14.5E_2_08	GSM2396351	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396351
+E14.5E_2_09	GSM2396352	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396352
+E14.5E_2_10	GSM2396353	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396353
+E14.5E_2_11	GSM2396354	Liver	Mus musculus	embryonic day: E14.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396354
+E15.5D_1_01	GSM2396355	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396355
+E15.5D_1_02	GSM2396356	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396356
+E15.5D_1_03	GSM2396357	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396357
+E15.5D_1_04	GSM2396358	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396358
+E15.5D_1_05	GSM2396359	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396359
+E15.5D_1_06	GSM2396360	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396360
+E15.5D_1_07	GSM2396361	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396361
+E15.5D_1_08	GSM2396362	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396362
+E15.5D_1_09	GSM2396363	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396363
+E15.5D_1_10	GSM2396364	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396364
+E15.5D_1_11	GSM2396365	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396365
+E15.5D_1_12	GSM2396366	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396366
+E15.5D_3_01	GSM2396367	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396367
+E15.5D_3_02	GSM2396368	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396368
+E15.5D_3_03	GSM2396369	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396369
+E15.5D_3_04	GSM2396370	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396370
+E15.5D_3_05	GSM2396371	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396371
+E15.5D_3_06	GSM2396372	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396372
+E15.5D_3_07	GSM2396373	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396373
+E15.5D_3_08	GSM2396374	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396374
+E15.5D_4_01	GSM2396375	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396375
+E15.5D_4_02	GSM2396376	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396376
+E15.5D_4_03	GSM2396377	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396377
+E15.5D_4_04	GSM2396378	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396378
+E15.5D_4_05	GSM2396379	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396379
+E15.5D_4_06	GSM2396380	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396380
+E15.5D_4_07	GSM2396381	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396381
+E15.5D_4_08	GSM2396382	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396382
+E15.5D_4_09	GSM2396383	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396383
+E15.5D_4_10	GSM2396384	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396384
+E15.5D_4_11	GSM2396385	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396385
+E15.5D_4_12	GSM2396386	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396386
+E15.5D_4_13	GSM2396387	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396387
+E15.5D_4_14	GSM2396388	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396388
+E15.5D_4_15	GSM2396389	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396389
+E15.5D_4_16	GSM2396390	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396390
+E15.5D_4_17	GSM2396391	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396391
+E15.5D_4_18	GSM2396392	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396392
+E15.5D_4_19	GSM2396393	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396393
+E15.5E_2_01	GSM2396394	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396394
+E15.5E_2_02	GSM2396395	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396395
+E15.5E_2_03	GSM2396396	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396396
+E15.5E_2_04	GSM2396397	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396397
+E15.5E_2_05	GSM2396398	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396398
+E15.5E_2_06	GSM2396399	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396399
+E15.5E_2_07	GSM2396400	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396400
+E15.5E_2_08	GSM2396401	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396401
+E15.5E_2_09	GSM2396402	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396402
+E15.5E_2_10	GSM2396403	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396403
+E15.5E_2_11	GSM2396404	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396404
+E15.5E_2_12	GSM2396405	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396405
+E15.5E_2_13	GSM2396406	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396406
+E15.5E_2_14	GSM2396407	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396407
+E15.5E_2_15	GSM2396408	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396408
+E15.5E_2_16	GSM2396409	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396409
+E15.5E_2_17	GSM2396410	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396410
+E15.5E_2_18	GSM2396411	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396411
+E15.5E_2_19	GSM2396412	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396412
+E15.5E_3_01	GSM2396413	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396413
+E15.5E_3_02	GSM2396414	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396414
+E15.5E_3_03	GSM2396415	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396415
+E15.5E_3_04	GSM2396416	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396416
+E15.5E_3_05	GSM2396417	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396417
+E15.5E_3_06	GSM2396418	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396418
+E15.5E_3_07	GSM2396419	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396419
+E15.5E_3_08	GSM2396420	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396420
+E15.5E_4_01	GSM2396421	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396421
+E15.5E_4_02	GSM2396422	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396422
+E15.5E_4_03	GSM2396423	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396423
+E15.5E_4_04	GSM2396424	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396424
+E15.5E_4_05	GSM2396425	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396425
+E15.5E_4_06	GSM2396426	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396426
+E15.5E_4_07	GSM2396427	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396427
+E15.5E_4_08	GSM2396428	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396428
+E15.5E_4_09	GSM2396429	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396429
+E15.5E_4_10	GSM2396430	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396430
+E15.5E_4_11	GSM2396431	Liver	Mus musculus	embryonic day: E15.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396431
+E17.5D_1_01	GSM2396432	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396432
+E17.5D_1_02	GSM2396433	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396433
+E17.5D_1_03	GSM2396434	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396434
+E17.5D_1_04	GSM2396435	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396435
+E17.5D_1_05	GSM2396436	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396436
+E17.5D_1_06	GSM2396437	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396437
+E17.5D_1_07	GSM2396438	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396438
+E17.5D_1_08	GSM2396439	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396439
+E17.5D_1_09	GSM2396440	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396440
+E17.5D_1_10	GSM2396441	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396441
+E17.5D_1_11	GSM2396442	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396442
+E17.5D_1_12	GSM2396443	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396443
+E17.5D_1_13	GSM2396444	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396444
+E17.5D_1_14	GSM2396445	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396445
+E17.5D_2_01	GSM2396446	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396446
+E17.5D_2_02	GSM2396447	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396447
+E17.5D_2_03	GSM2396448	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396448
+E17.5D_2_04	GSM2396449	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396449
+E17.5D_2_05	GSM2396450	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396450
+E17.5D_2_06	GSM2396451	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396451
+E17.5D_2_07	GSM2396452	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396452
+E17.5D_2_08	GSM2396453	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396453
+E17.5D_3_01	GSM2396454	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396454
+E17.5D_3_02	GSM2396455	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396455
+E17.5D_3_03	GSM2396456	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396456
+E17.5D_3_04	GSM2396457	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396457
+E17.5D_3_05	GSM2396458	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396458
+E17.5D_3_06	GSM2396459	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396459
+E17.5D_3_07	GSM2396460	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396460
+E17.5D_3_08	GSM2396461	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396461
+E17.5D_4_01	GSM2396462	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396462
+E17.5D_4_02	GSM2396463	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396463
+E17.5D_4_03	GSM2396464	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396464
+E17.5D_4_04	GSM2396465	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396465
+E17.5D_4_05	GSM2396466	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396466
+E17.5E_1_01	GSM2396467	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396467
+E17.5E_1_02	GSM2396468	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396468
+E17.5E_1_03	GSM2396469	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396469
+E17.5E_1_04	GSM2396470	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396470
+E17.5E_1_05	GSM2396471	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396471
+E17.5E_1_06	GSM2396472	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396472
+E17.5E_1_07	GSM2396473	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396473
+E17.5E_1_08	GSM2396474	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396474
+E17.5E_1_09	GSM2396475	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396475
+E17.5E_1_10	GSM2396476	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396476
+E17.5E_1_11	GSM2396477	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396477
+E17.5E_1_12	GSM2396478	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396478
+E17.5E_1_13	GSM2396479	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396479
+E17.5E_1_14	GSM2396480	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396480
+E17.5E_1_15	GSM2396481	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396481
+E17.5E_3_01	GSM2396482	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396482
+E17.5E_3_02	GSM2396483	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396483
+E17.5E_3_03	GSM2396484	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396484
+E17.5E_3_04	GSM2396485	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396485
+E17.5E_4_01	GSM2396486	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396486
+E17.5E_4_02	GSM2396487	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396487
+E17.5E_4_03	GSM2396488	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396488
+E17.5E_4_04	GSM2396489	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396489
+E17.5E_4_05	GSM2396490	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396490
+E17.5E_4_06	GSM2396491	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396491
+E17.5E_4_07	GSM2396492	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396492
+E17.5E_4_08	GSM2396493	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396493
+E17.5E_4_09	GSM2396494	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396494
+E17.5E_4_10	GSM2396495	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396495
+E17.5E_4_11	GSM2396496	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396496
+E17.5E_4_12	GSM2396497	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396497
+E17.5E_4_13	GSM2396498	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396498
+E17.5E_4_14	GSM2396499	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396499
+E17.5E_4_15	GSM2396500	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396500
+E17.5E_4_16	GSM2396501	Liver	Mus musculus	embryonic day: E17.5	culture time: NA	treatment: NA	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2396501
+CD_1_01	GSM2396502	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396502
+CD_2_01	GSM2396503	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396503
+CD_2_02	GSM2396504	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396504
+CD_2_03	GSM2396505	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396505
+CD_2_04	GSM2396506	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396506
+CD_2_05	GSM2396507	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396507
+CE_1_01	GSM2396508	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396508
+CE_1_02	GSM2396509	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396509
+CE_1_03	GSM2396510	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396510
+CE_1_04	GSM2396511	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396511
+CE_2_01	GSM2396512	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396512
+CE_2_02	GSM2396513	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396513
+CE_2_03	GSM2396514	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396514
+CE_2_04	GSM2396515	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396515
+CE_2_05	GSM2396516	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396516
+CE_2_06	GSM2396517	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396517
+CE_2_07	GSM2396518	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396518
+CE_2_08	GSM2396519	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396519
+TD_2_01	GSM2396520	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396520
+TD_2_02	GSM2396521	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396521
+TD_2_03	GSM2396522	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396522
+TD_2_04	GSM2396523	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396523
+TD_2_05	GSM2396524	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396524
+TD_2_06	GSM2396525	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: DLK+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2396525
+TE_1_01	GSM2396526	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396526
+TE_1_02	GSM2396527	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396527
+TE_1_03	GSM2396528	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396528
+TE_1_04	GSM2396529	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396529
+TE_1_05	GSM2396530	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396530
+TE_1_06	GSM2396531	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396531
+TE_1_07	GSM2396532	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396532
+TE_1_08	GSM2396533	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396533
+TE_1_09	GSM2396534	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396534
+TE_1_10	GSM2396535	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396535
+TE_2_01	GSM2396536	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396536
+TE_2_02	GSM2396537	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396537
+TE_2_03	GSM2396538	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396538
+TE_2_04	GSM2396539	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396539
+TE_2_05	GSM2396540	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396540
+TE_2_06	GSM2396541	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396541
+TE_2_07	GSM2396542	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396542
+TE_2_08	GSM2396543	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396543
+TE_2_09	GSM2396544	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396544
+TE_2_10	GSM2396545	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396545
+TE_2_11	GSM2396546	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396546
+TE_2_12	GSM2396547	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2396547
+E14.5D_3_01	GSM2574272	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574272
+E14.5D_3_02	GSM2574273	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574273
+E14.5D_3_03	GSM2574274	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574274
+E14.5D_3_04	GSM2574275	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574275
+E14.5D_3_05	GSM2574276	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574276
+E14.5D_3_06	GSM2574277	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574277
+E14.5D_3_07	GSM2574278	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574278
+E14.5D_3_08	GSM2574279	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574279
+E14.5D_3_09	GSM2574280	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574280
+E14.5D_3_10	GSM2574281	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574281
+E14.5D_3_11	GSM2574282	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574282
+E14.5D_3_12	GSM2574283	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574283
+E14.5D_3_13	GSM2574284	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574284
+E14.5D_3_14	GSM2574285	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P1 gate, DLK+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574285
+E14.5E_3_01	GSM2574286	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574286
+E14.5E_3_02	GSM2574287	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574287
+E14.5E_3_03	GSM2574288	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574288
+E14.5E_3_04	GSM2574289	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574289
+E14.5E_3_05	GSM2574290	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574290
+E14.5E_3_06	GSM2574291	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574291
+E14.5E_3_07	GSM2574292	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574292
+E14.5E_3_08	GSM2574293	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574293
+E14.5E_3_09	GSM2574294	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574294
+E14.5E_3_10	GSM2574295	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2574295
+E14.5E_3_11	GSM2574296	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574296
+E14.5E_3_12	GSM2574297	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574297
+E14.5E_3_13	GSM2574298	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574298
+E14.5E_3_14	GSM2574299	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2574299
+E14.5E_3_15	GSM2574300	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2574300
+E14.5E_3_16	GSM2574301	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2574301
+E14.5E_3_17	GSM2574302	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2574302
+E14.5E_3_18	GSM2574303	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2574303
+E14.5E_3_19	GSM2574304	Liver	Mus musculus	embryonic day: E14.5	culture time: na	treatment: na	"sorting: P2 gate, EpCAM+"	putative cell type: cholangiocyte	GPL17021	GSM2574304
+CE_3_01	GSM2574305	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574305
+CE_3_02	GSM2574306	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574306
+CE_3_03	GSM2574307	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574307
+CE_3_04	GSM2574308	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574308
+CE_3_05	GSM2574309	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574309
+CE_3_06	GSM2574310	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574310
+CE_3_07	GSM2574311	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574311
+CE_3_08	GSM2574312	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574312
+CE_3_09	GSM2574313	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574313
+CE_3_10	GSM2574314	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574314
+TUE_3_01	GSM2574315	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB+U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574315
+TUE_3_02	GSM2574316	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB+U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574316
+TUE_3_03	GSM2574317	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB+U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574317
+TUE_3_04	GSM2574318	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB+U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574318
+TUE_4_01	GSM2574319	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB+U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574319
+TUE_4_02	GSM2574320	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB+U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574320
+TUE_4_03	GSM2574321	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB+U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574321
+TUE_4_04	GSM2574322	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB+U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574322
+TUE_4_05	GSM2574323	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: TPPB+U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574323
+UE_3_01	GSM2574324	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574324
+UE_3_02	GSM2574325	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574325
+UE_3_03	GSM2574326	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574326
+UE_3_04	GSM2574327	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574327
+UE_3_05	GSM2574328	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574328
+CE_4_01	GSM2574329	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574329
+CE_4_02	GSM2574330	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: Control	sorting: EpCAM+	putative cell type: hepatoblast/hepatocyte	GPL17021	GSM2574330
+UE_4_01	GSM2574331	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574331
+UE_4_02	GSM2574332	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574332
+UE_4_03	GSM2574333	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574333
+UE_4_04	GSM2574334	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574334
+UE_4_05	GSM2574335	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574335
+UE_4_06	GSM2574336	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574336
+UE_4_07	GSM2574337	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574337
+UE_4_08	GSM2574338	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574338
+UE_4_09	GSM2574339	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574339
+UE_4_10	GSM2574340	Liver	Mus musculus	embryonic day: E12.5	culture time: 2 days	treatment: U0126	sorting: EpCAM+	putative cell type: cholangiocyte	GPL17021	GSM2574340
