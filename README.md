@@ -1,8 +1,9 @@
 # Expanded detection and impact of *BAP1* alterations in cancer
 Code for the project is available in the subdirectories here. \
-Code is also available along with large file fize data on [Zenodo](https://zenodo.org/records/10180501).
+Code is also available along with large file fize data on [Zenodo](https://zenodo.org/doi/10.5281/zenodo.10175692).
 
 ## Updates
+* 2024-07-17 A revised version of the preprint manuscript is now available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2023.11.21.568094v2) in PDF and HTML formats.
 * 2023-11-21 The preprint manuscript is now available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2023.11.21.568094v1) in PDF and HTML formats.
 
 ## Abstract
