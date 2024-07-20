@@ -1,0 +1,85 @@
+---
+title: "Variant filtering"
+author: "Ian R. Sturgill"
+format: html
+editor: visual
+---
+
+## Purpose
+
+Here we filter the list of *BAP1* variant calls to the variants that are more likely to be impactful -- that is, they are associated with comparatively low within-cohort RNA-level expression of the gene.
+
+## Set-up
+
+First load in the in-progress per-sample annotations generated from annotation_initialization.qmd.
+
+```{r}
+# renv::activate() # Activate R environment if necessary
+library(data.table)
+
+sample_anno <- fread("../annotation_initialization/sample_anno.txt")
+```
+
+## Identification of low expressers
+
+Our goal here is to broadly identify samples that are low expressers of the *BAP1* gene relative to their cohort using the RNA-seq data. Here we'll use the cohort-specific lower quartile as an expression threshold.
+
+```{r}
+cohorts <- sort(unique(sample_anno$cohort))
+
+expression_df <- data.frame(
+  tcga_id = sample_anno$tcga_id[!is.na(sample_anno$log2_bap1)],
+  cohort = sample_anno$cohort[!is.na(sample_anno$log2_bap1)],
+  log2_bap1 = na.omit(sample_anno$log2_bap1))
+
+for (cohort in cohorts) {
+  cohort_samples <- expression_df$tcga_id[expression_df$cohort == cohort]
+  lower25 <- quantile(na.omit(sample_anno$log2_bap1[sample_anno$cohort == cohort]),
+                      0.25)
+  
+  for (sample_id in cohort_samples) {
+    expression_df$low_expresser[expression_df$tcga_id == sample_id] <-
+      ifelse(expression_df$log2_bap1[expression_df$tcga_id == sample_id] < lower25,
+             TRUE, FALSE)
+  }
+}
+```
+
+## Variant filtering
+
+Now we'll perform filtering of somatic and germline variants based on RNA expression in order to identify high quality impactful *BAP1* variants. Germline variants are from the PanCanAtlas Publications page at [https://gdc.cancer.gov/about-data/publications/PanCanAtlas-Germline-AWG](#0) Please note that the germline variants contain controlled access information and require approval for dbGaP access.
+
+```{r}
+igv_pass_ids <- fread("../../data/igv_pass_ids.txt")
+variants <- fread("../../data/somatic_variants.txt")
+
+# Check that you have germline data or this won't run
+variants_germline <- fread("../../data/PanCanAtlas_Publications/PCA_pathVar_integrated_filtered_adjusted.tsv")
+variants_germline <- variants_germline[variants_germline$HUGO_Symbol == "BAP1", ]
+
+
+low_ids <- expression_df$tcga_id[expression_df$low_expresser == TRUE]
+
+variants_filtered <- variants[variants$SAMPLE %in% igv_pass_ids$tcga_id &
+                                variants$VAF >= 0.2 &
+                                variants$t_alt_count >= 2, ]
+
+variants_germline_filtered <- variants_germline[variants_germline$tumorVAF >= 0.2 & variants_germline$tumorAltCnt >= 2, ]
+
+write.table(variants_filtered, file = "variants_filtered.txt",
+            sep = "\t", row.names = FALSE)
+write.table(variants_germline_filtered, file = "variants_germline_filtered.txt",
+            sep = "\t", row.names = FALSE)
+```
+
+Lastly, we'll update our per-sample annotations.
+
+```{r}
+sample_anno$low_expresser <- ifelse(sample_anno$tcga_id %in% low_ids,
+                                    TRUE, FALSE)
+sample_anno <- sample_anno[, c("tcga_id", "cohort", "purity", "log2_bap1",
+                               "low_expresser", "copynumber_absolute_bap1",
+                               "bap1_segment_location", "bap1_segment_width")]
+
+write.table(sample_anno, file = "sample_anno.txt", sep = "\t", row.names = FALSE)
+```
