@@ -4,6 +4,7 @@ Code for the project is available in the subdirectories here, provided in Quarto
 Code is also available along with large file fize data on [Zenodo](https://zenodo.org/doi/10.5281/zenodo.10175692).
 
 ## Updates
+* 2024-11-15 The manuscript has completed peer review and has been published in [_NAR Cancer_](https://academic.oup.com/narcancer/article/6/4/zcae045/7901277).
 * 2024-07-17 A revised version of the preprint manuscript is now available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2023.11.21.568094v2) in PDF and HTML formats.
 * 2023-11-21 The preprint manuscript is now available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2023.11.21.568094v1) in PDF and HTML formats.
 
